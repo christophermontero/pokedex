@@ -1,0 +1,12 @@
+.pokemon-navbar {
+  background-color: #f44336;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+  .logo img {
+    max-width: 40px;
+    height: auto;
+  }
+}

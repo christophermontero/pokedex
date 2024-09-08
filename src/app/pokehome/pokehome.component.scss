@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding-top: 30px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.container .left-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-right: 30px;
+  min-width: 710px;
+}
