@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokeHomeComponent } from './pokehome/pokehome.component';
-import { PokeNavbarComponent } from './pokenavbar/pokenavbar.component';
+import { PokeHomeComponent } from './components/pokehome/pokehome.component';
+import { PokeNavbarComponent } from './components/pokenavbar/pokenavbar.component';
 
 @NgModule({
   declarations: [AppComponent, PokeHomeComponent, PokeNavbarComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
