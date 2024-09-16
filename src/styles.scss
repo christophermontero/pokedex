@@ -11,3 +11,37 @@ body {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --normal-type-color: #919aa2;
+  --fire-type-color: #ff9741;
+  --water-type-color: #3692dc;
+  --grass-type-color: #38bf4b;
+  --electric-type-color: #fbd100;
+  --ice-type-color: #4cd1c0;
+  --ground-type-color: #e87236;
+  --flying-type-color: #89aae3;
+  --poison-type-color: #b567ce;
+  --fighting-type-color: #e0306a;
+  --psychic-type-color: #ff6675;
+  --dark-type-color: #5b5466;
+  --rock-type-color: #c8b686;
+  --bug-type-color: #83c300;
+  --ghost-type-color: #4c6ab2;
+  --steel-type-color: #5a8ea2;
+  --dragon-type-color: #006fc9;
+  --fairy-type-color: #fb89eb;
+  --text-title-color: #121f34;
+  --text-number-color: #9ba7b4;
+  --background-color: #f7f8fc;
+  --border-color: #e4e7eb;
+  --stat-HP-color: #da253e;
+  --stat-ATK-color: #fd964f;
+  --stat-DEF-color: #fed653;
+  --stat-SpA-color: #80e0fe;
+  --stat-SpD-color: #aeef88;
+  --stat-SPD-color: #ed9daf;
+  --stat-TOT-color: #6f95de;
+  --stat-TOT-background-color: #d9e4ff;
+  --nav-background-color: #eeeef0;
+}

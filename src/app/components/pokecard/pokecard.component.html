@@ -1,0 +1,16 @@
+<div class="poke-card">
+  <img class="poke-sprite" [src]="poke?.sprite" />
+  <div class="card-content">
+    <div class="national-number">#{{ poke?.id }}</div>
+    <div class="poke-name">{{ poke?.name }}</div>
+    <div class="type-badges-container">
+      <div
+        [style.backgroundColor]="'var(--' + type + '-type-color)'"
+        class="type-badge"
+        *ngFor="let type of poke?.types"
+      >
+        {{ type }}
+      </div>
+    </div>
+  </div>
+</div>

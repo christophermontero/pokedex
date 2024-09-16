@@ -1,3 +1,12 @@
+.backdrop {
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -13,6 +22,18 @@
   align-items: center;
   padding-right: 30px;
   min-width: 710px;
+}
+
+app-search-bar {
+  width: calc(100% - 70px);
+  position: relative;
+  z-index: 2;
+}
+
+app-sort {
+  margin-top: 16px;
+  width: calc(100% - 80px);
+  margin-bottom: 16px;
 }
 
 .poke-grid-container {
@@ -39,4 +60,34 @@
   &::-webkit-scrollbar-thumb:hover {
     background: rgb(175, 175, 175);
   }
+}
+
+app-entry {
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateX(0px);
+  opacity: 1;
+  z-index: 2;
+
+  &.hidden {
+    transition: opacity 0.25s;
+    opacity: 0;
+  }
+
+  &.search-active {
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.1));
+  }
+}
+
+app-fab-scroll {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  z-index: 3;
+}
+
+app-pikachu-loading.initial {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

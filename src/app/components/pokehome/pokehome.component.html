@@ -2,7 +2,16 @@
   <app-pokenavbar></app-pokenavbar>
   <div class="container">
     <div class="left-container">
-      <div class="poke-grid-container"></div>
+      <div class="poke-grid-container">
+        <app-pokecard
+          *ngFor="
+            let poke of pokemons.slice(startIndex, endIndex);
+            trackBy: trackPokemonById
+          "
+          [poke]="poke"
+          (click)="setActivePokemon(poke)"
+        ></app-pokecard>
+      </div>
     </div>
   </div>
 </ng-container>
