@@ -49,7 +49,19 @@
       </div>
     </div>
     <div class="title">stats</div>
-    <div class="stats-bar"></div>
+    <div class="stats-bar">
+      <div class="stats-bar">
+        <app-poke-stats
+          *ngFor="let stat of pokemon?.stats"
+          [stat]="stat.name"
+          [value]="stat.value"
+        ></app-poke-stats>
+        <app-poke-stats
+          [stat]="'total'"
+          [value]="totalStatValue"
+        ></app-poke-stats>
+      </div>
+    </div>
   </div>
 </div>
 <ng-template #loading>
