@@ -9,6 +9,7 @@ import { PokeEntryComponent } from './components/poke-entry/poke-entry.component
 import { PokeHomeComponent } from './components/poke-home/poke-home.component';
 import { PokeNavbarComponent } from './components/poke-navbar/poke-navbar.component';
 import { PokeStatsComponent } from './components/poke-stats/poke-stats.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PokeStatsComponent } from './components/poke-stats/poke-stats.component
     PokeCardComponent,
     PokeEntryComponent,
     PokeStatsComponent,
+    LoaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

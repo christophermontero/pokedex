@@ -13,10 +13,4 @@ export class PokemonService {
   getPokemons() {
     return this.http.get<IPokeAPIResponse>(`${this._url}/pokemons.json`);
   }
-
-  getPokemonByName() {
-    return this.http.get<IPokeAPIResponse>(
-      `${this._url}/pokemons-details.json`
-    );
-  }
 }

@@ -24,13 +24,13 @@
   min-width: 710px;
 }
 
-app-search-bar {
+app-poke-search-bar {
   width: calc(100% - 70px);
   position: relative;
   z-index: 2;
 }
 
-app-sort {
+app-poke-sort {
   margin-top: 16px;
   width: calc(100% - 80px);
   margin-bottom: 16px;
@@ -62,7 +62,7 @@ app-sort {
   }
 }
 
-app-entry {
+app-poke-entry {
   transition: transform 0.5s, opacity 0.5s;
   transform: translateX(0px);
   opacity: 1;
@@ -78,14 +78,7 @@ app-entry {
   }
 }
 
-app-fab-scroll {
-  position: fixed;
-  bottom: 16px;
-  right: 24px;
-  z-index: 3;
-}
-
-app-pikachu-loading.initial {
+app-loader.initial {
   position: fixed;
   top: 50%;
   left: 50%;

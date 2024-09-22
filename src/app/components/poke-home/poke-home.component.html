@@ -1,23 +1,24 @@
+<app-loader class="initial" [hidden]="!loadingInitial"></app-loader>
 <ng-container *ngIf="!loadingInitial">
-  <app-pokenavbar></app-pokenavbar>
+  <app-poke-navbar></app-poke-navbar>
   <div class="container">
     <div class="left-container">
       <div class="poke-grid-container">
-        <app-pokecard
+        <app-poke-card
           *ngFor="
             let poke of pokemons.slice(startIndex, endIndex);
             trackBy: trackPokemonById
           "
           [poke]="poke"
           (click)="setActivePokemon(poke)"
-        ></app-pokecard>
+        ></app-poke-card>
       </div>
     </div>
-    <app-pokeentry
+    <app-poke-entry
       [class.search-active]="searchActive"
       *ngIf="activePokemonName"
       [pokemonName]="activePokemonName"
       #entry
-    ></app-pokeentry>
+    ></app-poke-entry>
   </div>
 </ng-container>

@@ -11,7 +11,7 @@ import { IPokeAPIResponse } from 'src/app/interfaces/pokeApiResponse';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
-  selector: 'app-pokeentry',
+  selector: 'app-poke-entry',
   templateUrl: './poke-entry.component.html',
   styleUrls: ['./poke-entry.component.scss'],
 })
@@ -42,15 +42,20 @@ export class PokeEntryComponent implements OnInit, OnChanges {
 
   getPokemonDetails() {
     this.loadingPoke = true;
-    this.pokeService.getPokemonByName().subscribe(
+    this.pokeService.getPokemons().subscribe(
       (res: IPokeAPIResponse) => {
-        this.pokemon = res.data
-          .filter((poke) => poke.name === this.pokemonName)
-          .pop();
-        this.setTotalStatValue();
-        this.loadingPoke = false;
+        setTimeout(() => {
+          this.pokemon = res.data
+            .filter((poke) => poke.name === this.pokemonName)
+            .pop();
+          this.setTotalStatValue();
+          this.loadingPoke = false;
+        }, 500);
       },
-      (err) => console.log(err)
+      (err) => {
+        console.log(err);
+        this.loadingPoke = false;
+      }
     );
   }
 
