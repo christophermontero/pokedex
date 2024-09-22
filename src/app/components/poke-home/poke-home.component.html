@@ -13,5 +13,11 @@
         ></app-pokecard>
       </div>
     </div>
+    <app-pokeentry
+      [class.search-active]="searchActive"
+      *ngIf="activePokemonName"
+      [pokemonName]="activePokemonName"
+      #entry
+    ></app-pokeentry>
   </div>
 </ng-container>

@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pokecard',
-  templateUrl: './pokecard.component.html',
-  styleUrls: ['./pokecard.component.scss'],
+  templateUrl: './poke-card.component.html',
+  styleUrls: ['./poke-card.component.scss'],
 })
 export class PokeCardComponent implements OnInit {
   @Input() poke: any;

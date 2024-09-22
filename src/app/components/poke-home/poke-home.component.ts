@@ -5,8 +5,8 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-pokehome',
-  templateUrl: './pokehome.component.html',
-  styleUrls: ['./pokehome.component.scss'],
+  templateUrl: './poke-home.component.html',
+  styleUrls: ['./poke-home.component.scss'],
 })
 export class PokeHomeComponent implements OnInit {
   loadingInitial: boolean = false;
@@ -18,6 +18,7 @@ export class PokeHomeComponent implements OnInit {
   entryCard!: ElementRef<HTMLElement>;
   currentPage: number = 1;
   cardsPerPage: number = 18;
+  searchActive = false;
 
   constructor(private pokeService: PokemonService) {}
 

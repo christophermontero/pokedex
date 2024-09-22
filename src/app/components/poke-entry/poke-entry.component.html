@@ -1,0 +1,57 @@
+<div class="outer-card" *ngIf="!loadingPoke; else loading">
+  <img
+    class="poke-sprite"
+    [class.large-img]="pokemon?.id == 3 || pokemon?.id == 6"
+    [src]="pokemon?.sprite"
+  />
+  <div class="card-content">
+    <div class="national-number">#{{ pokemon?.id }}</div>
+    <div class="poke-name">{{ pokemon?.name }}</div>
+    <div class="type-badges-container">
+      <div
+        [style.backgroundColor]="'var(--' + type + '-type-color)'"
+        class="type-badge"
+        *ngFor="let type of pokemon?.types"
+      >
+        {{ type }}
+      </div>
+    </div>
+    <div class="title">Abilities</div>
+    <div class="abilities-container">
+      <ng-container *ngFor="let ability of pokemon?.abilities">
+        <div class="info-container ability" *ngIf="!ability.is_hidden">
+          {{ ability }}
+        </div>
+      </ng-container>
+    </div>
+    <div class="grid-info">
+      <div>
+        <div class="title">height</div>
+        <div class="info-container">{{ pokemon?.height / 10 }}m</div>
+      </div>
+      <div>
+        <div class="title">weight</div>
+        <div class="info-container">{{ pokemon?.weight / 10 }}kg</div>
+      </div>
+      <div>
+        <div class="title">weaknesses</div>
+        <div class="info-container weakness">
+          <img
+            *ngFor="let weak of pokemon?.weaknesses"
+            [src]="'assets/' + weak + '_type_icon.svg'"
+            [title]="weak"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="title">base exp</div>
+        <div class="info-container">{{ pokemon?.experience }}</div>
+      </div>
+    </div>
+    <div class="title">stats</div>
+    <div class="stats-bar"></div>
+  </div>
+</div>
+<ng-template #loading>
+  <div>loading...</div>
+</ng-template>
